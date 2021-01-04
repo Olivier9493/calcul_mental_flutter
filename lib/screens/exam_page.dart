@@ -61,7 +61,10 @@ class _ExamPageState extends State<ExamPage> {
         ),
         keyboardType:
             TextInputType.numberWithOptions(signed: true, decimal: true),
-        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+        inputFormatters: [
+          FilteringTextInputFormatter.allow(RegExp(
+              r'^-?(?:-?(?:[0-9]+))?(?:.[0-9]*)?(?:[eE][+-]?(?:[0-9]+))?'))
+        ],
       ),
     ));
   }
