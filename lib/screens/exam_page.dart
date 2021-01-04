@@ -99,7 +99,7 @@ class _ExamPageState extends State<ExamPage> {
               enabled: inputEnable,
             ),
             keyboardType:
-            TextInputType.numberWithOptions(signed: true, decimal: true),
+                TextInputType.numberWithOptions(signed: true, decimal: true),
             inputFormatters: [FilteringTextInputFormatter.digitsOnly],
           )
         ],
