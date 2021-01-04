@@ -71,70 +71,64 @@ class _InputPageState extends State<InputPage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            flex: 1,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ReusableCard(
-                  colour: kActiveCardColor,
-                  cardChild: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+            child: ReusableCard(
+              colour: kActiveCardColor,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
                     children: [
-                      Row(
-                        children: [
-                          Text(
-                            'Opération choisie:  ',
-                            style: kLabelTextStyle,
-                          ),
-                          Text(
-                            '$chosenOperation',
-                            style: kOpeChosenTextStyle,
-                          )
-                        ],
+                      Text(
+                        'Opération choisie:  ',
+                        style: kLabelTextStyle,
                       ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          RoundIconButton(
-                              icon: FontAwesomeIcons.plus,
-                              onPressed: () {
-                                setState(() {
-                                  chosenOperation = 'Addition';
-                                });
-                              }),
-                          SizedBox(width: 10.0),
-                          RoundIconButton(
-                              icon: FontAwesomeIcons.minus,
-                              onPressed: () {
-                                setState(() {
-                                  chosenOperation = 'Soustraction';
-                                });
-                              }),
-                          SizedBox(width: 10.0),
-                          RoundIconButton(
-                              icon: FontAwesomeIcons.times,
-                              onPressed: () {
-                                setState(() {
-                                  chosenOperation = 'Multiplication';
-                                });
-                              }),
-                          SizedBox(width: 10.0),
-                          RoundIconButton(
-                              icon: FontAwesomeIcons.divide,
-                              onPressed: () {
-                                setState(() {
-                                  chosenOperation = 'Division';
-                                });
-                              }),
-                        ],
-                      ),
+                      Text(
+                        '$chosenOperation',
+                        style: kOpeChosenTextStyle,
+                      )
                     ],
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      RoundIconButton(
+                          icon: FontAwesomeIcons.plus,
+                          onPressed: () {
+                            setState(() {
+                              chosenOperation = 'Addition';
+                            });
+                          }),
+                      SizedBox(width: 10.0),
+                      RoundIconButton(
+                          icon: FontAwesomeIcons.minus,
+                          onPressed: () {
+                            setState(() {
+                              chosenOperation = 'Soustraction';
+                            });
+                          }),
+                      SizedBox(width: 10.0),
+                      RoundIconButton(
+                          icon: FontAwesomeIcons.times,
+                          onPressed: () {
+                            setState(() {
+                              chosenOperation = 'Multiplication';
+                            });
+                          }),
+                      SizedBox(width: 10.0),
+                      RoundIconButton(
+                          icon: FontAwesomeIcons.divide,
+                          onPressed: () {
+                            setState(() {
+                              chosenOperation = 'Division';
+                            });
+                          }),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
           ReusableCard(

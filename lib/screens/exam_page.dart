@@ -59,7 +59,8 @@ class _ExamPageState extends State<ExamPage> {
           helperText: 'Résultat de l\'opération',
           enabled: inputEnable,
         ),
-        keyboardType: TextInputType.number,
+        keyboardType:
+            TextInputType.numberWithOptions(signed: true, decimal: true),
         inputFormatters: [FilteringTextInputFormatter.digitsOnly],
       ),
     ));
@@ -81,7 +82,8 @@ class _ExamPageState extends State<ExamPage> {
               helperText: 'Quotient de la division',
               enabled: inputEnable,
             ),
-            keyboardType: TextInputType.number,
+            keyboardType:
+            TextInputType.numberWithOptions(signed: true, decimal: true),
             inputFormatters: [FilteringTextInputFormatter.digitsOnly],
           ),
           TextField(
@@ -96,7 +98,8 @@ class _ExamPageState extends State<ExamPage> {
               helperText: 'Reste de la division',
               enabled: inputEnable,
             ),
-            keyboardType: TextInputType.number,
+            keyboardType:
+            TextInputType.numberWithOptions(signed: true, decimal: true),
             inputFormatters: [FilteringTextInputFormatter.digitsOnly],
           )
         ],
@@ -200,6 +203,7 @@ class _ExamPageState extends State<ExamPage> {
           ReusableCard(
             colour: kActiveCardColor,
             cardChild: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
                   'Synthèse de l\'examen',
@@ -250,9 +254,12 @@ class _ExamPageState extends State<ExamPage> {
                       SizedBox(
                         width: 15.0,
                       ),
-                      Text(
-                        '$operationText',
-                        style: kOperationExamStyle,
+                      Expanded(
+                        child: Text(
+                          '$operationText',
+                          style: kOperationExamStyle,
+                          overflow: TextOverflow.clip,
+                        ),
                       ),
                       SizedBox(width: 15.0),
                       widget.dataCalcul.chosenOperation == 'Division'
@@ -283,9 +290,12 @@ class _ExamPageState extends State<ExamPage> {
                       SizedBox(
                         width: 10.0,
                       ),
-                      Text(
-                        '$incentiveText',
-                        style: incentiveTextStyle,
+                      Expanded(
+                        child: Text(
+                          '$incentiveText',
+                          style: incentiveTextStyle,
+                          overflow: TextOverflow.clip,
+                        ),
                       ),
                     ],
                   ),
