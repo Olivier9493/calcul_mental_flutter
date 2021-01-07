@@ -2,7 +2,7 @@
 
 Un entrainement pour le calcul mental pour le primaire.
 Cette application est inspiré par l'application web [calcul](http://lire.au.cp.free.fr/math/calcul/calcul_mental.html)
-Il est possible de consulter le code de cette application sur la [page Github de Petitboy](https://github.com/Petitboy/lire-au-cp]
+Il est possible de consulter le code de cette application sur la [page Github de Petitboy](https://github.com/Petitboy/lire-au-cp)
 
 
 ## Détail
