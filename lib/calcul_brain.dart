@@ -54,6 +54,10 @@ class CalculBrain {
       case 'Division':
         {
           currentOperation = String.fromCharCode($divide);
+          if (currentOperand2 == 0) {
+            // We must avoid a division by zero!!
+            currentOperand2++;
+          }
         }
         break;
     }

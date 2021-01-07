@@ -20,8 +20,8 @@ class _ExamPageState extends State<ExamPage> {
   int currentOperation = 1;
   String operationText;
   int currentScore = 0;
-  int proposedResult;
-  int proposedReminder;
+  int proposedResult = 0;
+  int proposedReminder = 0;
   int correctResult;
   int correctReminder;
   String resultSentence = ' ';
